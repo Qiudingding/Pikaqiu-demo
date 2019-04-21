@@ -26,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FEE433;
+  background: rgb(254, 220, 6);
 }
 .wrapper{
   width: 100%;
@@ -120,7 +120,7 @@
   border: 2px solid black;
   position: absolute;
   top: 48px;
-  background: #FEE433;
+  background: rgb(254, 220, 6);
 }
 .upperLip.left{
   right: 50%;
@@ -185,10 +185,10 @@
 			.siblings( '.active').removeClass('active')
 		switch(speed){
 			case 'slow':
-				duration = 100
+				duration = 50
 				break
 			case 'normal':
-				duration = 50
+				duration = 30
 				break
 			case 'fast':
 			duration = 10
@@ -197,3 +197,15 @@
 	})
 }.call()
 
+function rbf(){
+ var audio = document.getElementById('audio'); 
+ audio.currentTime = 0;
+}
+function bf(){
+ var audio = document.getElementById('audio');             
+  if(audio.paused){                 
+      audio.play();//audio.play();// 这个就是播放  
+  }else{
+   audio.pause();// 这个就是暂停
+  }
+ } 

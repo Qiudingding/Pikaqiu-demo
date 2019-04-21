@@ -8,10 +8,13 @@
   <title>画一只皮卡丘给你看</title>
 </head>
 <body>
-<div class="code-wrapper">
-  <pre id="code"></pre>
-</div>
-<div class="preview-wrapper">
+  <audio id="audio" controls="true" hidden="hidden" autoplay="autoplay" loop="loop">
+    <source src="./pikaqiu.mp3" type="audio/mpeg" />
+  </audio>
+  <div class="code-wrapper">
+    <pre id="code"></pre>
+  </div>
+  <div class="preview-wrapper">
     <div class="preview">
       <div class="wrapper">
         <div class="lowerLip-wrapper">
@@ -31,6 +34,8 @@
   <button data-speed="slow">慢速</button>
   <button data-speed="normal" class="active">中速</button>
   <button data-speed="fast">快速</button>
+  <button onclick="bf()">开启/暂停音乐</button>
+  <button onclick="rbf()">重新播放音乐</button>
 </div>
 <script type="text/javascript" src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/main.js">
